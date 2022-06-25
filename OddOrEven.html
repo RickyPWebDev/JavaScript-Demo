@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>IS your number odd or even?</h1>
+<script>
+    //variable set to keep track of the number of "guesses" and also to check how many is left for the user
+ var numberOfNumbers = 0;
+ var left = 10;
+
+ /*while loop set for 10 literatons with a condition to set to true when variable numberOfNumbers is equal to 10
+  there is conditional logic to check if input is even or odd, the conditional to check if 10 entered numbers are used 
+  feedback to the user if that is the case end the loop*/
+
+while(numberOfNumbers < 10) {
+    var number = prompt("Please enter a number " + "this is your " + numberOfNumbers + " number check you have  " + left + " numbers left to use");
+    if(number %2 == 0) {
+        alert(number + " is even");
+    } else {
+        alert(number + " is odd");
+    }
+
+numberOfNumbers = numberOfNumbers +1;
+left = left -1;
+ if(numberOfNumbers == 10) {
+    alert("you have used your ten gueses");
+ }
+}
+ 
+    
+
+</script>
+</body>
+</html>
